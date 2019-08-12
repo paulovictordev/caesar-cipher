@@ -5,13 +5,13 @@ export default function Main() {
     return (
         <div className="main-container">
             <div className="input-container">
-                <textarea id="a" rows="10" cols="50"></textarea>
+                <textarea id="a" rows="10" cols="40"></textarea>
                     <div className="button-container">
-                    <input placeholder="Key"></input>
                         <button>Cipher</button>
+                        <input placeholder="Key"></input>
                         <button>Decipher</button>
                     </div>
-                <textarea id="b" rows="10" cols="50"></textarea>
+                <textarea id="b" rows="10" cols="40"></textarea>
             </div>
         </div>        
     );
