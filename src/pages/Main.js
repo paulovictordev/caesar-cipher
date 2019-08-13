@@ -1,17 +1,49 @@
 import React from 'react';
 import './Main.css';
+import { encrypt, decrypt, phraseToArray } from '../assets/crypto';
 
 export default function Main() {
+    function cipher(e) {
+        e.preventDefault();
+
+        let key = parseInt(document.getElementById('key').value);
+        let textDecipher = document.getElementById('textDecipher').value;
+        const pharse = phraseToArray(textDecipher);
+        const textCipher = encrypt(pharse, key);
+        document.getElementById('textCipher').value = textCipher;
+    }
+
+    function decipher(e) {
+        e.preventDefault();
+
+        let key = parseInt(document.getElementById('key').value);
+        let textCipher = document.getElementById('textCipher').value;
+        const pharse = phraseToArray(textCipher);
+        const textDecipher = decrypt(pharse, key);
+        document.getElementById('textDecipher').value = textDecipher;
+    }
+
     return (
         <div className="main-container">
             <div className="input-container">
-                <textarea id="a" rows="10" cols="40"></textarea>
+                <textarea 
+                    id="textDecipher" 
+                    rows="10" 
+                    cols="40"
+                ></textarea>
                     <div className="button-container">
-                        <button>Cipher</button>
-                        <input placeholder="Key"></input>
-                        <button>Decipher</button>
+                        <button onClick={cipher}>Cipher</button>
+                        <input 
+                            id="key"
+                            placeholder="Key"
+                        ></input>
+                        <button onClick={decipher}>Decipher</button>
                     </div>
-                <textarea id="b" rows="10" cols="40"></textarea>
+                <textarea 
+                    id="textCipher" 
+                    rows="10" 
+                    cols="40"
+                ></textarea>
             </div>
         </div>        
     );
