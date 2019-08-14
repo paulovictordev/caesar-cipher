@@ -11,8 +11,8 @@ export function encrypt(phrase, key) {
 
     phrase.forEach(symbol => {
         alphabet.forEach(symbolAlphabet => {
-            if (symbol === symbolAlphabet) {
-                if ((alphabet.lastIndexOf(symbolAlphabet) + key) < (alphabet.length - 1)) {
+            if (symbolAlphabet === symbol) {
+                if ((alphabet.lastIndexOf(symbolAlphabet) + key) <= (alphabet.length - 1)) {
                     phraseEncrypt.push(alphabet[alphabet.lastIndexOf(symbolAlphabet) + key]);
                 } else {
                     phraseEncrypt.push(alphabet[(alphabet.lastIndexOf(symbolAlphabet) + key) - alphabet.length]);
@@ -36,7 +36,7 @@ export function decrypt(phrase, key) {
 
     phrase.forEach(symbol => {
         alphabet.forEach(symbolAlphabet => {
-            if (symbol === symbolAlphabet) {
+            if (symbolAlphabet === symbol) {
                 if ((alphabet.lastIndexOf(symbolAlphabet) - key) >= 0) {
                     phraseDecrypt.push(alphabet[alphabet.lastIndexOf(symbolAlphabet) - key]);
                 } else {
