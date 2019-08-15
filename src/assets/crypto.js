@@ -5,7 +5,8 @@ const alphabet = ['a', 'b', 'c', 'd', 'e',
         'u', 'v', 'w', 'x', 'y',
         'z'];
 
-export function encrypt(phrase, key) {
+export function encrypt(text, key) {
+    let phrase = phraseToArray(text);
     let phraseEncrypt = [];
     let phraseSize = 0;
 
@@ -30,7 +31,8 @@ export function encrypt(phrase, key) {
     return phraseEncrypt.join('');
 }
 
-export function decrypt(phrase, key) {
+export function decrypt(text, key) {
+    let phrase = phraseToArray(text);
     let phraseDecrypt = [];
     let phraseSize = 0;
 
@@ -55,6 +57,6 @@ export function decrypt(phrase, key) {
     return phraseDecrypt.join('');
 };
 
-export function phraseToArray(phrase) {
-    return phrase.toLowerCase().split('');
+function phraseToArray(text) {
+    return text.toLowerCase().split('');
 }
