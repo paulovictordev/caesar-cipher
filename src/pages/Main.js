@@ -1,26 +1,20 @@
 import React, { useState } from 'react';
 import './Main.css';
-import { encrypt, decrypt, phraseToArray } from '../assets/crypto';
+import { encrypt, decrypt } from '../assets/crypto';
 
 export default function Main() {
     const [key, setKey] = useState(3);
-    const [textDecipher, setTextDecipher] = useState('');
     const [textCipher, setTextCipher] = useState('');
+    const [textDecipher, setTextDecipher] = useState('');
 
-    function cipher(e) {
-        e.preventDefault();
-
-        let pharse = phraseToArray(textDecipher);
-        let textCipher = encrypt(pharse, key);
-        setTextCipher(textCipher);
+    function cipher() {
+       let textEncrypt = encrypt(textDecipher, key);
+       setTextCipher(textEncrypt);
     }
 
-    function decipher(e) {
-        e.preventDefault();
-
-        let pharse = phraseToArray(textCipher);
-        let textDecipher = decrypt(pharse, key);
-        setTextDecipher(textDecipher);
+    function decipher() {
+        let textDecrypt = decrypt(textCipher, key);
+        setTextDecipher(textDecrypt);
     }
 
     return (
@@ -31,18 +25,18 @@ export default function Main() {
                     rows="10" 
                     cols="40"
                     value={ textDecipher }
-                    onChange={ e => setTextDecipher(e.target.value)}
+                    onChange={ e => setTextDecipher(e.target.value) }
                 ></textarea>
                 <div className="button-container">
-                    <button onClick={cipher}>Cipher</button>
+                    <button onClick={ cipher }>Cipher</button>
                     <input 
                         id="key"
                         type="number"
                         placeholder="Key"
-                        value={key}
-                        onChange={ e => setKey(e.target.value)}
+                        value={ key }
+                        onChange={ e => setKey(e.target.value) }
                     ></input>
-                    <button onClick={decipher}>Decipher</button>
+                    <button onClick={ decipher }>Decipher</button>
                 </div>
                 <textarea 
                     id="textCipher" 
