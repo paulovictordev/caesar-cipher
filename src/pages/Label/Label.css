@@ -1,5 +1,7 @@
 .label-container {
     text-align: center;
+    background-color: #FFF;
+    border-radius: 4px;
 }
 
 .label-container p {

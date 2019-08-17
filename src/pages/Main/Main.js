@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './Main.css';
 
 import Label from '../Label/Label';
-import { encrypt, decrypt } from '../../assets/crypto';
+import Footer from '../Footer/Footer';
+import { encrypt, decrypt } from '../../assets/js/crypto';
 
 export default function Main() {
     const [key, setKey] = useState(3);
@@ -51,6 +52,7 @@ export default function Main() {
                     onChange={ e => setTextCipher(e.target.value) }
                 ></textarea>
             </div>
+            <Footer />
         </div>        
     );
 }
