@@ -5,4 +5,20 @@
 .label-container p {
     font-size: 14px;
     letter-spacing: 0.6px;
+    padding: 0 50px;
+}
+
+@media(max-width: 450px) {
+    .label-container p {
+        font-size: 12px;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width: 750px) {
+    .label-container p {
+        font-size: 14px;
+        padding: 0 20px;
+    }
 }
