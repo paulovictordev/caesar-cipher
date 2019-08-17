@@ -24,6 +24,7 @@ export default function Main() {
                     id="textDecipher" 
                     rows="10" 
                     cols="40"
+                    placeholder="Write your decrypted text..."
                     value={ textDecipher }
                     onChange={ e => setTextDecipher(e.target.value) }
                 ></textarea>
@@ -42,6 +43,7 @@ export default function Main() {
                     id="textCipher" 
                     rows="10" 
                     cols="40"
+                    placeholder="Write your encrypted text..."
                     value= { textCipher }
                     onChange={ e => setTextCipher(e.target.value) }
                 ></textarea>
