@@ -55,7 +55,7 @@ export function decrypt(text, key) {
     });
 
     return phraseDecrypt.join('');
-};
+}
 
 function phraseToArray(text) {
     return text.toLowerCase().split('');
