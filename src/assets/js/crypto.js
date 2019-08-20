@@ -12,12 +12,12 @@ export function encrypt(text, key) {
 
     phrase.forEach(symbol => {
         alphabet.forEach(symbolAlphabet => {
-            if (symbolAlphabet === symbol) {
-                if ((alphabet.lastIndexOf(symbolAlphabet) + key) <= (alphabet.length - 1)) {
+            if(symbolAlphabet === symbol) {       
+                if((alphabet.lastIndexOf(symbolAlphabet) + key) <= (alphabet.length - 1)) {
                     phraseEncrypt.push(alphabet[alphabet.lastIndexOf(symbolAlphabet) + key]);
                 } else {
                     phraseEncrypt.push(alphabet[(alphabet.lastIndexOf(symbolAlphabet) + key) - alphabet.length]);
-                }
+                }      
             }
         });
 

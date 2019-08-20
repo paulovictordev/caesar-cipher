@@ -39,7 +39,7 @@ export default function Main() {
                         type="number"
                         placeholder="Key"
                         value={ key }
-                        onChange={ e => setKey(e.target.value) }
+                        onChange={ e => setKey(parseInt(e.target.value)) }
                     ></input>
                     <button onClick={ decipher }>Decipher</button>
                 </div>
