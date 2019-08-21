@@ -13,7 +13,7 @@ footer .logo {
     margin-left: 10px; 
 }
 
-@media(max-width: 450px) {
+@media screen and (max-width: 450px) {
     footer p {
         font-size: 10px;
         margin: 20px 0;

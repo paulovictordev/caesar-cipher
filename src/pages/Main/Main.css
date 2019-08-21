@@ -55,7 +55,7 @@
     background-color: #58ACFA;
 }
 
-@media(max-width: 450px) {
+@media screen and (max-width: 450px) {
     .main-container {
         width:auto;
         margin: 0 30px;
@@ -80,7 +80,7 @@
         margin: 0 10px;
     }
 }
-@media(max-width: 750px) {
+@media screen and (max-width: 750px) {
     .button-container input {
         width: 110px;
     }
