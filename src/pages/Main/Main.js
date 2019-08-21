@@ -23,9 +23,9 @@ export default function Main() {
     return (
         <div className="main-container">
             <Label />
-            <div className="input-container">
+            <section className="input-container">
                 <textarea 
-                    id="textDecipher" 
+                    name="textDecipher" 
                     rows="10" 
                     cols="40"
                     placeholder="Write your decrypted text..."
@@ -35,7 +35,7 @@ export default function Main() {
                 <div className="button-container">
                     <button onClick={ cipher }>Cipher</button>
                     <input 
-                        id="key"
+                        name="key"
                         type="number"
                         placeholder="Key"
                         value={ key }
@@ -44,14 +44,14 @@ export default function Main() {
                     <button onClick={ decipher }>Decipher</button>
                 </div>
                 <textarea 
-                    id="textCipher" 
+                    name="textCipher" 
                     rows="10" 
                     cols="40"
                     placeholder="Write your encrypted text..."
                     value= { textCipher }
                     onChange={ e => setTextCipher(e.target.value) }
                 ></textarea>
-            </div>
+            </section>
             <Footer />
         </div>        
     );
