@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Main.css';
 
-import Label from '../Label/Label';
+import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { encrypt, decrypt } from '../../assets/js/crypto';
 
@@ -22,7 +22,7 @@ export default function Main() {
 
     return (
         <div className="main-container">
-            <Label />
+            <Header />
             <section className="input-container">
                 <textarea 
                     name="textDecipher" 

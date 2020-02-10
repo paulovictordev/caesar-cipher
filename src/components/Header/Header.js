@@ -1,7 +1,7 @@
 import React from 'react';
-import './Label.css';
+import './Header.css';
 
-export default function Label() {
+export default function Header() {
     return (
         <div className="label-container">
             <p>
