@@ -1,27 +1,12 @@
-.label-container {
+.header {
+    width: 100%;
+    margin: 20px 0;
     text-align: center;
-    border-radius: 4px;
 }
 
-.label-container p {
-    font-size: 24px;
+.header h1 {
+    font-size: 1.8rem;
     letter-spacing: 0.6px;
-    padding: 0 50px;
     color: #424242;
     font-weight: bold;
-}
-
-@media screen and (max-width: 450px) {
-    .label-container p {
-        font-size: 18px;
-        padding: 0 20px;
-        margin-bottom: 30px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .label-container p {
-        font-size: 18px;
-        padding: 0 20px;
-    }
 }

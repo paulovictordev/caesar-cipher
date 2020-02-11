@@ -3,10 +3,9 @@ import './Header.css';
 
 export default function Header() {
     return (
-        <div className="label-container">
-            <p>
-                Caesar Cipher </p>
-        </div>
+        <header className="header">
+            <h1>Caesar Cipher</h1>
+        </header>
         
     );
 }
