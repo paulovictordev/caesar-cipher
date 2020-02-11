@@ -1,21 +1,13 @@
-footer {
-    text-align: center;
-}
-
-footer p {
-    font-size: 12px;
+.footer {
     display: flex;
-  justify-content: center;
-  align-items: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-footer .logo {
-    margin-left: 10px; 
-}
-
-@media screen and (max-width: 450px) {
-    footer p {
-        font-size: 10px;
-        margin: 20px 0;
-    }
+.footer span {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-right: 5px;
+    color: #424242;
 }
