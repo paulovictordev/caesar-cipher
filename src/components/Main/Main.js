@@ -11,8 +11,8 @@ export default function Main() {
     const [textDecipher, setTextDecipher] = useState('');
 
     function cipher() {
-       let textEncrypt = encrypt(textDecipher, key);
-       setTextCipher(textEncrypt);
+        let textEncrypt = encrypt(textDecipher, key);
+        setTextCipher(textEncrypt);
     }
 
     function decipher() {
@@ -23,36 +23,7 @@ export default function Main() {
     return (
         <div className="main-container">
             <Header />
-            <section className="input-container">
-                <textarea 
-                    name="textDecipher" 
-                    rows="10" 
-                    cols="40"
-                    placeholder="Write your decrypted text..."
-                    value={ textDecipher }
-                    onChange={ e => setTextDecipher(e.target.value) }
-                ></textarea>
-                <div className="button-container">
-                    <button onClick={ cipher }>Cipher</button>
-                    <input 
-                        name="key"
-                        type="number"
-                        placeholder="Key"
-                        value={ key }
-                        onChange={ e => setKey(parseInt(e.target.value)) }
-                    ></input>
-                    <button onClick={ decipher }>Decipher</button>
-                </div>
-                <textarea 
-                    name="textCipher" 
-                    rows="10" 
-                    cols="40"
-                    placeholder="Write your encrypted text..."
-                    value= { textCipher }
-                    onChange={ e => setTextCipher(e.target.value) }
-                ></textarea>
-            </section>
             <Footer />
-        </div>        
+        </div>
     );
 }
